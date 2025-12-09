@@ -100,7 +100,6 @@ If the bot cannot classify an input, it searches the FAQ knowledge base.
 │   ├── lstm_intent_classifier/ # LSTM model (optional)
 │   └── finetuned_model/        # Fine-tuned model (optional)
 ├── scripts/
-│   ├── make_dist.ps1           # Build distribution package
 │   └── train_models.py         # Training pipeline (optional)
 └── logs/                       # Application logs
 ```
@@ -111,14 +110,6 @@ Environment variables (optional):
 - `CHATBOT_SQLITE_PATH`: Database file path (default: `chatbot.db`)
 - `CHATBOT_LOG_LEVEL`: `WARNING`, `INFO`, `DEBUG` (default: `WARNING`)
 - `CHATBOT_LOG_DIR`: Log directory (default: `logs`)
-
-## Distribution
-
-Build a distribution package:
-```powershell
-.\scripts\make_dist.ps1
-```
-Creates `Chatbot-dist.zip` with all necessary files (excludes venv, logs, cache).
 
 ## Troubleshooting
 
